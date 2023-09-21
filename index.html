@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+    
+    
+	<title>Split Text on Hover</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="boule1" ></div>
+    <header>
+        <h2 id="logo" style="font-family: magneto;">Yuk-MeD</h2>
+        
+        <nav>
+            <ul>
+                <li><a href="#" data-text="Home">Home</a></li>
+                <li><a href="#" data-text="About">About</a></li>
+                <li><a href="#" data-text="Feature">Feature</a></li>
+                <li><a href="#" data-text="Services">Service</a></li>
+                <li><a href="#" data-text="Contact">Contact</a></li>
+            </ul>
+            <!-- <li><a href="#" data-text="Contacto">Contacto</a></li>-->
+        </nav>
+        <div class="bt"><a href="" class="btn">Get Started</a></div>
+                
+    </header>
+    <main>
+        <div class="boule" ></div>
+    
+    <div class="boule2" style="transform: translateX(0px);
+    animation: float 6s ease-out infinite;" >
+        <style>
+                                    
+        @keyframes float{
+            0%{transform: translateY(0px);}
+            50%{transform: translateY(-60px);}
+            100%{transform: translateY(0px);}
+        }
+    </style>
+    </div>
+      <div class="decompt">
+        <h1 id="countdown"></h1>
+    <script>
+      // Date de fin du compte à rebours (format : année, mois, jour, heure, minute, seconde)
+      var countDownDate = new Date("Dec 31, 2023 23:59:59").getTime();
+
+      // Mettre à jour le compte à rebours toutes les secondes
+      var x = setInterval(function() {
+
+        // Récupérer la date et l'heure actuelles
+        var now = new Date().getTime();
+
+        // Calculer la différence entre la date de fin et la date actuelle
+        var distance = countDownDate - now;
+
+        // Calculer les jours, heures, minutes et secondes restants
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Afficher le compte à rebours dans l'élément HTML avec l'id "countdown"
+        document.getElementById("countdown").innerHTML = days + "j " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // Si le compte à rebours est terminé, afficher un message
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRÉ";
+        }
+      }, 1000);
+    </script>
+      </div>  
+       
+    </main>
+   
+</body>
+</html>
