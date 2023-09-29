@@ -95,11 +95,11 @@ ul li a:hover:after {
   
 
   #logo:hover{
-    color: red;
-    width: 130px;
+    color: crimson;
+   
     border-radius: 50px;
     cursor: pointer;
-    background-color: rgb(204, 200, 200);
+    background-color: white(138, 0, 0);
   }
   
   
@@ -133,22 +133,18 @@ nav {
 .btn {
     font-family: 'Arial', Courier, monospace;
     color: whitesmoke;
-    width: 115px;
-    height: 30px;
+    
+    height: 38px;
     margin-left: 15px;
     transition: .5s;
     cursor: pointer;
-    text-decoration: none;
+    /* text-decoration: none; */
     background-color: crimson;
 }
-.bt{background-color: crimson;
-    width: 115px;
-    height: 30px;
-    border-radius: 20px;}
+.btn:hover{background-color: rgb(241, 127, 127);
+color: black;}
 
-.btn:hover {
-    box-shadow: 0 0 10px rgba(212, 12, 12, 0.5);
-}
+
 
 
 
