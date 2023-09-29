@@ -1,1 +1,6 @@
-
+.bt{margin-left: 20px;
+  font-family: 'Arial', Courier, monospace;
+  color: whitesmoke;
+  /* text-decoration: none; */
+  background-color: crimson;}
+  .bt:hover{background-color: rgb(211, 144, 144);}
